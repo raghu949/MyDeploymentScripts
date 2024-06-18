@@ -36,13 +36,13 @@ variable "instance-associate-public-ip" {
 variable "vpc-cidr-block" {
   description = "The CIDR block to associate to the VPC"
   type        = string
-  default     = "150.0.0.0/16"
+  default     = "175.0.0.0/16"
 }
 
 variable "subnet-cidr-block" {
   description = "The CIDR block to associate to the subnet"
   type        = string
-  default     = "150.0.1.0/24"
+  default     = "175.0.1.0/24"
 }
 
 variable "ig-tag-name" {
