@@ -1,0 +1,24 @@
+#Grafana Installation through 
+sudo apt-get install -y software-properti
+es-common
+sudo add-apt-repository "deb https://packages.grafana.com/oss/deb stable main"
+curl https://packages.grafana.com/gpg.key | sudo apt-key add -apt
+sudo apt-get update
+sudo apt-get install grafana
+sudo systemctl start grafana-server
+sudo systemctl enable grafana-server
+http://your_server_ip:3000
+Usename & Password admin at first login change the default password
+
+########################################################################
+#Installation of Prometheous
+wget https://github.com/prometheus/prometheus/releases/download/v2.43.0/prometheus-2.43.0.linux-amd64.tar.gz
+tar vxf prometheus*.tar.gz
+Prometheous running on 9090
+ - job_name: "prometheus"
+
+    # metrics_path defaults to '/metrics'
+    # scheme defaults to 'http'.
+
+    static_configs:
+      - targets: ["localhost:9090"]
